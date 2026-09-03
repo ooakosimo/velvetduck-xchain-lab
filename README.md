@@ -8,7 +8,22 @@ When Feathers Fly, Heads Will Roll.
 
 This repository is a small experimental lab for testing how browser-native and image-based artworks can move through the XChain ecosystem.
 
-Velvet Duck is OOAKOSIMO's imaginary secretary: equal parts femme fatale, surreal office phantom, cyberpunk gangland operator, administrative enforcer, and complaint-processing menace.
+Velvet Duck is OOAKOSIMO's imaginary secretary. Velvet Duck operates in the blurred space between executive secretary and enforcer. She processes complaints no one remembers filing, resolves conflicts no one survives reporting, and presides over an office where paperwork becomes prophecy and every stamp is final.
+
+Known complaints include:
+- Quacked too much
+- Swiped my bread
+- Feather in my coffee
+- Too many eggs
+- Got mobbed
+Status
+This is an experimental testnet repository.
+Things may break.
+That is partly the point.
+
+Artist
+OOAKOSIMO / Mohini O
+Interactive art, browser-native artwork, creative coding, cryptoart, moving-image systems, and assorted digital misbehavior.
 
 ## Why this repo exists
 
@@ -46,3 +61,4 @@ velvetduck-xchain-lab/
 ├── velvetduck.json
 ├── velvetduck.png
 └── velvetduck_icon.jpg
+
