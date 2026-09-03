@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<title>VELVET DUCK // OFFICE GYMNASTICS</title>
+
+<style>
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#eee7d3;
+  font-family:monospace;
+}
+
+canvas{
+  display:block;
+}
+
+#hud{
+  position:fixed;
+  left:14px;
+  top:14px;
+  z-index:5;
+  background:#111;
+  color:#f5e9bd;
+  border:2px solid #f5e9bd;
+  padding:10px 12px;
+  font-size:11px;
+  line-height:1.5;
+  pointer-events:none;
+  box-shadow:5px 5px 0 rgba(0,0,0,.15);
+}
+
+#hint{
+  position:fixed;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:5;
+  background:rgba(255,250,230,.9);
+  border:2px solid #111;
+  padding:8px 12px;
+  font-size:10px;
+  font-weight:bold;
+  pointer-events:none;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+</head>
+
+<body>
+
+<div id="hud">
+VELVET DUCK<br>
+IMAGINARY SECRETARY<br>
+STATUS: UNBOTHERED<br>
+COMPLAINTS: <span id="complaints">000</span>
+</div>
+
+<div id="hint">
+TAP / CLICK TO FILE A COMPLAINT
+</div>
+
+<script>
+
+let duck;
+let x, y;
+let vx = 2;
+let vy = 0;
+
+let angle = 0;
+let spin = 0;
+
+let scaleX = 1;
+
+let complaints = 0;
+
+let mode = 0;
+let modeTimer = 0;
+
+let particles = [];
+
+
+function preload(){
+
+  duck = loadImage(
+    "velvetduck.png"
+  );
+
+}
+
+
+function setup(){
+
+  createCanvas(
+    windowWidth,
+    windowHeight
+  );
+
+  imageMode(CENTER);
+
+  x = width / 2;
+  y = height / 2;
+
+}
+
+
+function draw(){
+
+  background("#eee7d3");
+
+
+  // office floor lines
+
+  stroke(0,20);
+
+  for(
+    let yy = height*.72;
+    yy < height;
+    yy += 28
+  ){
+
+    line(
+      0,
+      yy,
+      width,
+      yy
+    );
+
+  }
+
+
+  updateDuck();
+
+  drawParticles();
+
+
+  push();
+
+  translate(x,y);
+
+  rotate(angle);
+
+  scale(
+    scaleX,
+    1
+  );
+
+
+  // shadow
+
+  push();
+
+  rotate(-angle);
+
+  scale(
+    1/scaleX,
+    1
+  );
+
+  noStroke();
+
+  fill(0,30);
+
+  ellipse(
+    0,
+    duck.height*.23,
+    min(duck.width*.55,260),
+    25
+  );
+
+  pop();
+
+
+  // duck
+
+  let maxSize =
+    min(
+      width*.55,
+      height*.68
+    );
+
+
+  let ratio =
+    duck.width
+    /
+    duck.height;
+
+
+  let h =
+    maxSize;
+
+  let w =
+    h * ratio;
+
+
+  image(
+    duck,
+    0,
+    0,
+    w,
+    h
+  );
+
+
+  pop();
+
+
+  modeTimer--;
+
+
+  if(
+    modeTimer <= 0
+  ){
+
+    mode = 0;
+
+  }
+
+}
+
+
+function updateDuck(){
+
+  let floor =
+    height*.70;
+
+
+  vy += .35;
+
+
+  x += vx;
+
+  y += vy;
+
+
+  angle += spin;
+
+
+  spin *= .992;
+
+
+  // normal secretary swagger
+
+  if(
+    mode === 0
+  ){
+
+    angle +=
+      sin(frameCount*.035)
+      *
+      .002;
+
+    vx =
+      lerp(
+        vx,
+        sin(frameCount*.01)*1.5,
+        .01
+      );
+
+  }
+
+
+  // cartwheel
+
+  if(
+    mode === 1
+  ){
+
+    spin =
+      .16;
+
+  }
+
+
+  // backflip
+
+  if(
+    mode === 2
+  ){
+
+    spin =
+      -.21;
+
+  }
+
+
+  // bureaucratic helicopter
+
+  if(
+    mode === 3
+  ){
+
+    spin =
+      .32;
+
+    vy -=
+      .16;
+
+  }
+
+
+  // angry office pacing
+
+  if(
+    mode === 4
+  ){
+
+    vx =
+      sin(frameCount*.22)
+      *
+      8;
+
+  }
+
+
+  // dramatic squash
+
+  if(
+    mode === 5
+  ){
+
+    scaleX =
+      sin(frameCount*.18)
+      >
+      0
+      ?
+      1
+      :
+      -1;
+
+  }else{
+
+    scaleX =
+      lerp(
+        scaleX,
+        scaleX < 0 ? -1 : 1,
+        .08
+      );
+
+  }
+
+
+  // floor bounce
+
+  if(
+    y > floor
+  ){
+
+    y =
+      floor;
+
+    vy *=
+      -.72;
+
+    if(
+      abs(vy) < 1
+    )
+      vy = 0;
+
+  }
+
+
+  // walls
+
+  if(
+    x < width*.15
+  ){
+
+    x =
+      width*.15;
+
+    vx =
+      abs(vx);
+
+  }
+
+
+  if(
+    x > width*.85
+  ){
+
+    x =
+      width*.85;
+
+    vx =
+      -abs(vx);
+
+  }
+
+}
+
+
+function fileComplaint(){
+
+  complaints++;
+
+
+  document
+  .getElementById(
+    "complaints"
+  )
+  .textContent =
+    String(
+      complaints
+    )
+    .padStart(
+      3,
+      "0"
+    );
+
+
+  mode =
+    floor(
+      random(
+        1,
+        6
+      )
+    );
+
+
+  modeTimer =
+    random(
+      80,
+      180
+    );
+
+
+  // launch her
+
+  vy =
+    random(
+      -15,
+      -8
+    );
+
+
+  vx =
+    random(
+      -8,
+      8
+    );
+
+
+  spin =
+    random(
+      -.2,
+      .2
+    );
+
+
+  // complaint explosion
+
+  for(
+    let i=0;
+    i<25;
+    i++
+  ){
+
+    particles.push({
+
+      x:x,
+
+      y:y,
+
+      vx:random(-5,5),
+
+      vy:random(-7,-1),
+
+      life:255,
+
+      text:
+        random([
+          "QUACK!",
+          "FILED!",
+          "DENIED!",
+          "STAMP!",
+          "???",
+          "ASS-CII!",
+          "COMPLAINT!"
+        ])
+
+    });
+
+  }
+
+}
+
+
+function drawParticles(){
+
+  textAlign(
+    CENTER,
+    CENTER
+  );
+
+  textStyle(
+    BOLD
+  );
+
+
+  for(
+    let i=
+      particles.length-1;
+    i>=0;
+    i--
+  ){
+
+    let p =
+      particles[i];
+
+
+    p.x +=
+      p.vx;
+
+    p.y +=
+      p.vy;
+
+    p.vy +=
+      .12;
+
+    p.life -=
+      4;
+
+
+    noStroke();
+
+    fill(
+      20,
+      p.life
+    );
+
+
+    textSize(
+      11
+    );
+
+
+    text(
+      p.text,
+      p.x,
+      p.y
+    );
+
+
+    if(
+      p.life <= 0
+    ){
+
+      particles.splice(
+        i,
+        1
+      );
+
+    }
+
+  }
+
+}
+
+
+function mousePressed(){
+
+  fileComplaint();
+
+}
+
+
+function touchStarted(){
+
+  fileComplaint();
+
+  return false;
+
+}
+
+
+function windowResized(){
+
+  resizeCanvas(
+    windowWidth,
+    windowHeight
+  );
+
+}
+
+</script>
+
+</body>
+</html>
