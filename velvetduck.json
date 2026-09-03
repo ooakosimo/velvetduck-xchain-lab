@@ -1,0 +1,42 @@
+{
+  "tick": "VELVETDUCK",
+  "name": "OoakosiMo's Imaginary Secretary: Velvet Duck",
+  "description": "She's Ducky & Dangerous! A Quack to Kill For! When Feathers Fly, Heads Will Roll! Velvet Duck is OOAKOSIMO's imaginary secretary: equal parts femme fatale, surreal office phantom, cyberpunk gangland operator and administrative enforcer.",
+  "website": "https://ooakosimo.github.io/velvetduck-xchain-lab/",
+  "categories": [
+    {
+      "type": "main",
+      "data": "NFT"
+    },
+    {
+      "type": "medium",
+      "data": "Interactive Art"
+    },
+    {
+      "type": "technology",
+      "data": "Browser Art"
+    }
+  ],
+  "images": [
+    {
+      "data": "https://ooakosimo.github.io/velvetduck-xchain-lab/velvetduck.png",
+      "name": "velvetduck.png",
+      "type": "image/png",
+      "title": "Velvet Duck"
+    },
+    {
+      "data": "https://ooakosimo.github.io/velvetduck-xchain-lab/velvetduck_icon.jpg",
+      "name": "velvetduck_icon.jpg",
+      "type": "image/jpeg",
+      "title": "Velvet Duck Token Icon"
+    }
+  ],
+  "files": [
+    {
+      "data": "https://ooakosimo.github.io/velvetduck-xchain-lab/",
+      "name": "Velvet Duck Interactive",
+      "type": "text/html",
+      "title": "Enter Velvet Duck's Office"
+    }
+  ]
+}
