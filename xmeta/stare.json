@@ -1,0 +1,32 @@
+{
+  "tick": "STARE",
+  "asset": "STARE",
+  "name": "stare at someting without really looking at it while u smoke a pack of cigarettes for breakfast",
+  "title": "stare at someting without really looking at it while u smoke a pack of cigarettes for breakfast",
+  "description": "like a chim chiminy chimchiminy chimchimcherooo choo choo. random a/v gymnastics temporary relief from panic attacks. 1st published via YouTube. TechStack: premiere pro + resolume arena + obs project + pureref + visual studio code + neocities",
+  "website": "https://youtu.be/yjpL7OpV6GA",
+  "html": "<div style=\"position:relative;width:100%;padding-top:56.25%;overflow:hidden;background:#000;\"><video controls playsinline preload=\"metadata\" poster=\"https://mohini.neocities.org/xchain/cactus-thumb.png\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;\"><source src=\"https://i.imgur.com/B474YWI.mp4\" type=\"video/mp4\"></video></div>",
+  "image": "https://mohini.neocities.org/xchain/cactus-thumb.png",
+  "image_large": "https://mohini.neocities.org/xchain/cactus-thumb.png",
+  "images": [
+    {
+      "data": "https://mohini.neocities.org/xchain/cactus-thumb.png",
+      "name": "cactus-thumb.png",
+      "type": "image/png",
+      "title": "stare at someting without really looking at it while u smoke a pack of cigarettes for breakfast"
+    }
+  ],
+  "video": [
+    {
+      "data": "https://i.imgur.com/B474YWI.mp4",
+      "name": "stare.mp4",
+      "type": "video/mp4",
+      "title": "stare at someting without really looking at it while u smoke a pack of cigarettes for breakfast"
+    }
+  ],
+  "category": "Video Art",
+  "subcategory": "A/V Gymnastics",
+  "project": "OOAKOSIMO XChain Metadata Experiments",
+  "techstack": "premiere pro + resolume arena + obs project + pureref + visual studio code + neocities",
+  "source": "https://youtu.be/yjpL7OpV6GA"
+}
