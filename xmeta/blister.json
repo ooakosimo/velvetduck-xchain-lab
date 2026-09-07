@@ -1,0 +1,29 @@
+{
+  "tick": "BLISTER",
+  "asset": "BLISTER",
+  "name": "BLISTERPACK SURVIVAL KIT // FREE WILL SOLD SEPARATELY",
+  "title": "YOU ARE NOW CONSUMING: BLISTERPACK SURVIVAL KIT",
+  "description": "desire installed. appetite medicated. perception desensitized. anxiety conveniently induced then sold back as relief. a little consumer emergency kit for surviving the systems that keep manufacturing the emergency. free will sold separately.",
+  "website": "https://mohini.neocities.org/xchain/blister.png",
+  "html": "<div style=\"position:relative;width:100%;padding-top:141.4%;overflow:hidden;background:#111;\"><img src=\"https://mohini.neocities.org/xchain/blister.png\" alt=\"BLISTERPACK SURVIVAL KIT\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#111;\"></div>",
+  "image": "https://mohini.neocities.org/xchain/blister-icon.png",
+  "image_large": "https://mohini.neocities.org/xchain/blister.png",
+  "images": [
+    {
+      "data": "https://mohini.neocities.org/xchain/blister-icon.png",
+      "name": "blister-icon.png",
+      "type": "image/png",
+      "title": "BLISTERPACK SURVIVAL KIT — icon"
+    },
+    {
+      "data": "https://mohini.neocities.org/xchain/blister.png",
+      "name": "blister.png",
+      "type": "image/png",
+      "title": "YOU ARE NOW CONSUMING: BLISTERPACK SURVIVAL KIT"
+    }
+  ],
+  "category": "Digital Art",
+  "subcategory": "Survival Glitch / Consumer Systems",
+  "project": "DIGESTING THE SYSTEM / OOAKOSIMO XChain Metadata Experiments",
+  "source": "https://mohini.neocities.org/xchain/blister.png"
+}
