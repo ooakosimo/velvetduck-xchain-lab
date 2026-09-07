@@ -1,0 +1,57 @@
+{
+  "tick": "CONSUME",
+  "asset": "CONSUME",
+  "name": "YOU ARE NOW CONSUMING",
+  "title": "CONSUME / OBEY / FREE WILL SOLD SEPARATELY",
+  "description": "desire installed. appetite medicated. perception desensitized. anxiety conveniently induced then sold back as relief. consumer survival media for systems that keep manufacturing the emergency. free will sold separately.",
+  "website": "https://mohini.neocities.org/xchain/CONSUME-OBEY-0.gif",
+  "image": "https://mohini.neocities.org/xchain/hypnosis-icon.png",
+  "image_large": "https://mohini.neocities.org/xchain/CONSUME-OBEY-0.gif",
+  "images": [
+    {
+      "data": "https://mohini.neocities.org/xchain/hypnosis-icon.png",
+      "name": "hypnosis-icon.png",
+      "type": "image/png",
+      "title": "CONSUME — token icon"
+    },
+    {
+      "data": "https://mohini.neocities.org/xchain/CONSUME-OBEY-0.gif",
+      "name": "CONSUME-OBEY-0.gif",
+      "type": "image/gif",
+      "title": "YOU ARE NOW CONSUMING"
+    },
+    {
+      "data": "https://mohini.neocities.org/xchain/FREEWILL.gif",
+      "name": "FREEWILL.gif",
+      "type": "image/gif",
+      "title": "FREE WILL SOLD SEPARATELY"
+    }
+  ],
+  "audio": [
+    {
+      "data": "https://mohini.neocities.org/xchain/BADGUY.mp3",
+      "name": "BADGUY.mp3",
+      "type": "audio/mpeg",
+      "title": "BAD GUY — CONSUME audio layer"
+    }
+  ],
+  "video": [
+    {
+      "data": "https://mohini.neocities.org/xchain/grandma.mp4",
+      "name": "grandma.mp4",
+      "type": "video/mp4",
+      "title": "GRANDMA — CONSUME video layer"
+    }
+  ],
+  "category": "New Media Art",
+  "subcategory": "Consumer Systems / Survival Glitch",
+  "project": "DIGESTING THE SYSTEM / OOAKOSIMO XChain Metadata Experiments",
+  "files": [
+    {
+      "data": "https://ooakosimo.github.io/velvetduck-xchain-lab/xmeta/consume.json",
+      "name": "consume.json",
+      "type": "application/json",
+      "title": "CONSUME metadata"
+    }
+  ]
+}
