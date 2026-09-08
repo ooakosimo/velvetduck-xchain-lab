@@ -1,0 +1,51 @@
+{
+  "tick": "CELEBRITYCUTS",
+  "asset": "CELEBRITYCUTS",
+  "name": "CELEBRITY CUTS™",
+  "title": "CELEBRITY CUTS™ // CONSENT SOLD SEPARATELY",
+  "description": "authenticated genetic provenance for the discerning consumer. once flesh becomes manufacturable material, fame becomes flavor, identity becomes inventory and biological provenance becomes another luxury label. speculative consumer horror about cultivated tissue, parasocial appetite, ownership and commodification. no real celebrity is represented. consent sold separately.",
+  "website": "https://ooakosimo.github.io/velvetduck-xchain-lab/",
+  "image": "https://mohini.neocities.org/xchain/QP-icon.png",
+  "image_large": "https://mohini.neocities.org/xchain/CELEBRITYCUTS.png",
+  "images": [
+    {
+      "data": "https://mohini.neocities.org/xchain/QP-icon.png",
+      "name": "QP-icon.png",
+      "type": "image/png",
+      "title": "QUESTIONABLE PROGRESS™ — token icon"
+    },
+    {
+      "data": "https://mohini.neocities.org/xchain/CELEBRITYCUTS.png",
+      "name": "CELEBRITYCUTS.png",
+      "type": "image/png",
+      "title": "CELEBRITY CUTS™ // CONSENT SOLD SEPARATELY"
+    }
+  ],
+  "audio": [
+    {
+      "data": "https://mohini.neocities.org/xchain/BADGUY.mp3",
+      "name": "BADGUY.mp3",
+      "type": "audio/mpeg",
+      "title": "BAD GUY — QUESTIONABLE PROGRESS™ audio layer"
+    }
+  ],
+  "video": [
+    {
+      "data": "https://mohini.neocities.org/xchain/QP-BANNER.mp4",
+      "name": "QP-BANNER.mp4",
+      "type": "video/mp4",
+      "title": "QUESTIONABLE PROGRESS™ — moving product banner"
+    }
+  ],
+  "category": "New Media Art",
+  "subcategory": "Speculative Consumer Horror / Biotech Satire",
+  "project": "QUESTIONABLE PROGRESS™ / OOAKOSIMO XChain Metadata Experiments",
+  "files": [
+    {
+      "data": "https://ooakosimo.github.io/velvetduck-xchain-lab/xmeta/celebritycuts.json",
+      "name": "celebritycuts.json",
+      "type": "application/json",
+      "title": "CELEBRITY CUTS™ metadata"
+    }
+  ]
+}
